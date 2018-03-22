@@ -5,8 +5,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './graficas1.component.html',
   styles: []
 })
-
 export class Graficas1Component implements OnInit {
+
 
   graficos: any = {
     'grafico1': {

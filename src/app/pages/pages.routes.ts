@@ -1,21 +1,26 @@
-import { RouterModule, Routes } from "@angular/router";
+import { RouterModule, Routes } from '@angular/router';
 
-import { PagesComponent } from '../pages/pages.component';
-import { DashboardComponent } from "../pages/dashboard/dashboard.component";
-import { Graficas1Component } from "../pages/graficas1/graficas1.component";
-import { ProgressComponent } from '../pages/progress/progress.component';
+import { PagesComponent } from './pages.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ProgressComponent } from './progress/progress.component';
+import { Graficas1Component } from './graficas1/graficas1.component';
+import { AccoutSettingsComponent } from './accout-settings/accout-settings.component';
 
 
-const PagesRoutes: Routes = [
-    { 
-        path: '', 
+
+const pagesRoutes: Routes = [
+    {
+        path: '',
         component: PagesComponent,
         children: [
             { path: 'dashboard', component: DashboardComponent },
             { path: 'progress', component: ProgressComponent },
             { path: 'graficas1', component: Graficas1Component },
-            { path: '', redirectTo: 'dashboard', pathMatch: 'full' }
+            { path: 'account-settings', component: AccoutSettingsComponent },
+            { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
         ]
-    },
-]
-export const PAGES_ROUTES = RouterModule.forChild( PagesRoutes );
+    }
+];
+
+
+export const PAGES_ROUTES = RouterModule.forChild( pagesRoutes );

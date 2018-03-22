@@ -1,32 +1,40 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 
-
-//Rutas
+// Rutas
 import { APP_ROUTES } from './app.routes';
 
-//Modulos
+// Modulos
 import { PagesModule } from './pages/pages.module';
 
-//Componentes
+// temporal
+import { FormsModule } from '@angular/forms';
+
+// Servicios
+import { ServiceModule } from './services/service.module';
+
+
+
+
+// Componentes
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './login/register.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
-    PagesModule,
     APP_ROUTES,
-    FormsModule
-
+    PagesModule,
+    FormsModule,
+    ServiceModule
   ],
   providers: [],
   bootstrap: [AppComponent]
