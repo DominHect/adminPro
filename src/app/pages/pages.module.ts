@@ -18,13 +18,22 @@ import { Graficas1Component } from './graficas1/graficas1.component';
 // Pipes Modulos
 import { PipesModule } from '../pipes/pipes.module';
 
-// temporal
+// Mantenimiento
+import { UsuariosComponent } from './usuarios/usuarios.component';
+import { HospitalesComponent } from './hospitales/hospitales.component';
+import { MedicosComponent } from './medicos/medicos.component';
+
+// componentes
 import { IncrementadorComponent } from '../components/incrementador/incrementador.component';
 import { GraficoDonaComponent } from '../components/grafico-dona/grafico-dona.component';
+import { ModalUploadComponent } from '../components/modal-upload/modal-upload.component';
+
+// temporal
 import { AccoutSettingsComponent } from './accout-settings/accout-settings.component';
 import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { ProfileComponent } from './profile/profile.component';
+
 
 @NgModule({
     declarations: [
@@ -38,7 +47,10 @@ import { ProfileComponent } from './profile/profile.component';
         PromesasComponent,
         RxjsComponent,
         ProfileComponent,
-        
+        UsuariosComponent,
+        HospitalesComponent,
+        MedicosComponent,
+        ModalUploadComponent
     ],
     exports: [
         DashboardComponent,
