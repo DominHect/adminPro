@@ -18,6 +18,12 @@
     width: 50px;
 }
 
+.img-80 {
+    width: 80px;
+    height: 50px;
+    border-radius: 5px;
+}
+
 .oculto {
     display: none;
 }

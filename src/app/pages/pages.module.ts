@@ -33,6 +33,7 @@ import { AccoutSettingsComponent } from './accout-settings/accout-settings.compo
 import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { ProfileComponent } from './profile/profile.component';
+import { MedicoComponent } from './medicos/medico.component';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { ProfileComponent } from './profile/profile.component';
         UsuariosComponent,
         HospitalesComponent,
         MedicosComponent,
-        ModalUploadComponent
+        ModalUploadComponent,
+        MedicoComponent
     ],
     exports: [
         DashboardComponent,
