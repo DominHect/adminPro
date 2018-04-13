@@ -10,6 +10,10 @@
     width: 150px;
 }
 
+.center-Items{
+    align-items: center;
+}
+
 .w70 {
     width: 70px;
 }

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MedicoService } from '../../services/service.index';
 import { Medico } from '../../models/medico.model';
-import { URL_SERVICIOS } from '../../config/config';
+import { MedicoService } from '../../services/service.index';
 
 @Component({
   selector: 'app-medicos',
@@ -10,7 +9,6 @@ import { URL_SERVICIOS } from '../../config/config';
 })
 export class MedicosComponent implements OnInit {
 
-  cargando: boolean = false;
   medicos: Medico[] = [];
 
   constructor(
@@ -21,26 +19,27 @@ export class MedicosComponent implements OnInit {
     this.cargarMedicos();
   }
 
-  cargarMedicos(){
-    this._medicoService.cargarMedicos().subscribe( (medicos: any) => this.medicos = medicos )
+  cargarMedicos() {
+    this._medicoService.cargarMedicos()
+          .subscribe( medicos => this.medicos = medicos );
   }
 
-  buscarMedico(termino: string) {
-    if (termino.length <= 0) {
+  buscarMedico( termino: string ) {
+
+    if ( termino.length <= 0 ) {
       this.cargarMedicos();
       return;
     }
-    this._medicoService.buscarMedicos(termino)
-      .subscribe((medicos: Medico[]) => {
-        this.medicos = medicos;
-          console.log( medicos )
-      });
+
+    this._medicoService.buscarMedicos( termino )
+            .subscribe( medicos =>  this.medicos = medicos );
   }
 
-  borrarMedico( medico: Medico ){
+  borrarMedico( medico: Medico ) {
 
     this._medicoService.borrarMedico( medico._id )
-            .subscribe( () => this.cargarMedicos() );
+            .subscribe( () =>  this.cargarMedicos() );
 
   }
+
 }
